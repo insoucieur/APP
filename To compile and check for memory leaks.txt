@@ -1,0 +1,8 @@
+g++ —Wall o exec name main.cpp
+clang++ 6.1.hpp 6.1.o 6.1main.cpp
+clang++ 6.1.2.hpp 6.1.o 6.1.2.o 6.1.2main.cpp
+
+valgrind -v --leak-check=full ./(terminal exec)
+valgrind -v --tool=memcheck ls -l
+valgrind -v --leak-check=full ls -l
+valgrind -v --tool=memcheck ls -l --leak-check=full --show-leak-kinds=all
